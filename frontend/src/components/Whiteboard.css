@@ -1,0 +1,53 @@
+.whiteboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: #fff;
+  cursor: crosshair;
+}
+
+.whiteboard-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.colors {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+.color.black { background-color: black; }
+.color.red { background-color: red; }
+.color.green { background-color: green; }
+.color.blue { background-color: blue; }
+.color.yellow { background-color: yellow; }
+.color.white { background-color: white; border: 2px dashed #999; }
+
+
+.toolbar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
