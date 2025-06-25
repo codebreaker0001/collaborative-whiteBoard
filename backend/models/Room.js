@@ -18,7 +18,8 @@ const roomSchema = new mongoose.Schema({
   },
   creator: { type: String, required: true }, // Store username or userId
   members: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-  permissions: [permissionSchema]
+  permissions: [permissionSchema],
+  canvasData: { type: String, default: '' }
 }, { timestamps: true });
 
 const Room = mongoose.model('Room', roomSchema);
