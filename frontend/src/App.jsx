@@ -74,11 +74,15 @@ function App() {
     <>
       <div style={{ position: 'absolute', top: 10, right: 20, zIndex: 1000 }}>
         <span style={{ marginRight: 15 }}>
-          Room: <b>{room}</b> | User: <b>{username}</b>
+          Room: <b>{room.room}</b> | User: <b>{room.username}</b> ({room.userPermissions})
         </span>
         <button onClick={handleLogout}>Logout</button>
       </div>
-      <Whiteboard room={room} username={username} />
+      <Whiteboard
+        room={room.room}
+        username={room.username}
+        userPermissions={room.userPermissions}
+      />
     </>
   );
 }
