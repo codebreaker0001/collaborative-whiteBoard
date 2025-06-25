@@ -22,6 +22,8 @@ export default function RoomForm({ token, onJoin }) {
       setError('Username is required');
       return;
     }
+    console.log(username);
+    
 
     setIsLoading(true);
     

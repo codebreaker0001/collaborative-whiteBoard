@@ -17,26 +17,27 @@ export const login = async (username, password) => {
   });
   return res.json();
 };
-export const createRoom = async (name, token) => {
+export const createRoom = async (name, token, { type, creator }) => {
   const res = await fetch(`${BASE_URL}/room/create`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`
     },
-    body: JSON.stringify({ name }),
+    body: JSON.stringify({ name, type, creator })
   });
-  return res.json();
+  return await res.json();
 };
 
-export const joinRoom = async (name, token) => {
+// joinRoom
+export const joinRoom = async (name, token, username) => {
   const res = await fetch(`${BASE_URL}/room/join`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`
     },
-    body: JSON.stringify({ name }),
+    body: JSON.stringify({ name, username })
   });
-  return res.json();
+  return await res.json();
 };
