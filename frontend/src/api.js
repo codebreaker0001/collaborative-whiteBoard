@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = 'https://collaborative-whiteboard.up.railway.app/api';
 
 export const signup = async (email, username, password) => {
   const res = await fetch(`${BASE_URL}/auth/signup`, {

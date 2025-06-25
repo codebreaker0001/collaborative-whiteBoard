@@ -12,9 +12,15 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
+
+const allowedOrigins = [
+  'http://localhost:5173', // your local dev
+  'https://collaborative-white-board-5hc8io81g-adarsh-yadavs-projects.vercel.app' // your deployed frontend
+];
+
 const io = new SocketIO(server, {
   cors: {
-    origin: 'http://localhost:5173',
+    origin: allowedOrigins,
     methods: ['GET', 'POST']
   },
 });
