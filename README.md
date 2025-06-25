@@ -38,23 +38,32 @@ A real-time collaborative whiteboard web application built with **React**, **Nod
 ### Setup Backend
 cd server
 npm install
- 
+
+---
+
 ### create .env
 PORT=3000
 MONGO_URI=mongodb://localhost:27017/whiteboard
 JWT_SECRET=your_secret_key
 
+---
+
 ### start backend
 npm run dev
+
+---
 
 ### Setup frontend
 cd ../client
 npm install
 
+---
+
 ### start frontend
 npm run dev 
-
 Frontend runs at http://localhost:5173
+
+---
 
 ## Author - @codebreaker0001
 
